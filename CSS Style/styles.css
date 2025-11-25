@@ -1,0 +1,334 @@
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/poppins-v24-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/poppins-v24-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/poppins-v24-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+ 
+ :root{
+    --color-primary-light: #819B57;
+    --color-primary-dark: #31261A;
+    --color-primary-white: #FAF4EA;
+ }
+ 
+ /*BASE*/
+ 
+ body{
+    color: var(--color-primary-dark);
+    background-color: var(--color-primary-white);
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5; /*27px(line-height):18px(font size)=1.5*/
+    margin: 0;
+ } 
+ h1,h2,h3,h4,h5,h6,p {
+margin-top: 0;
+ }
+ address{
+       font-style: normal;
+ }
+ ul{
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+ }
+ .section{
+       padding: 48px 0;
+ }
+
+ .hidden {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+ }
+
+ .container {
+       width: 100%;
+       max-width: 1288px;
+       margin:0 auto;
+ }
+
+ /*h1{
+  background-color: var(--color-primary-white);
+ }
+ h1{
+color: aquamarine;
+}*/
+
+/*MAIN*/
+ .main-title{border: 4px solid rgb(90, 82, 199);
+}
+/*#main-title{
+            color: aquamarine;
+            border: 4px solid rgb(90, 82, 199);
+background-color: rgb(187, 121, 248);
+        }*/
+       
+ [type="button"]{
+ border: 4px solid violet;
+  }
+
+/* BUTTON*/
+        .button {
+        padding: 16px 32px;
+        color: var(--color-primary-white);
+        font-weight: 600;
+        background-color: var(--color-primary-light);
+        border: 2px solid var(--color-primary-light);
+        border-radius: 8px;
+        cursor: pointer;
+       }
+       .button:hover{
+        background-color: transparent;
+        color: var(--color-primary-light);
+       }
+       .button:active{
+        background-color:rgb(209, 123, 166);
+       }
+
+/*LINK*/
+       .link{
+        color: var(--color-primary-white);
+        text-decoration: none;
+       }
+       .link:hover{
+        color: var(--color-primary-light);
+        background-color: transparent;
+        /*text-decoration: underline;*/
+       }
+
+/*HEADER*/
+.header-container{
+       display: flex;
+       align-items: center;
+       gap: 40px;
+}
+.header-nav{
+       flex-grow: 1;
+        display: flex;
+       align-items: center;
+       gap: 40px;
+}
+.header-menu{
+      display: flex;  
+      gap: 64px;
+      flex-grow: 1;
+      justify-content: center;
+}
+
+/*HERO*/
+.hero-section{
+       padding: 272px 0; /*зверху і знизу вийде272 а по боках 0*/
+margin-bottom: 0;
+background-image: url("../images/couple-in-bakery.jpg");
+background-repeat: no-repeat;
+background-position: center top;
+background-size: cover;
+background-attachment: fixed;
+}
+       .hero-title{
+        color: var(--color-primary-white);
+        text-align: center;
+        font-weight: 900;
+        font-size: 128px;
+        /*font-style: italic;*/
+        /*letter-spacing: 4px;*/
+        /*text-shadow: 2px 2px 4px violet;*/
+       }
+       .hero-title .accent{
+        color: var(--color-primary-light);
+        /*text-transform:capitalize;*/
+       }
+/*Adventages*/
+.adventages-section{
+ background-color: var(--color-primary-light);
+ padding: 16px 0;
+}
+       .adventages-list{
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+       }
+       .advanteges-item{
+       color: var(--color-primary-white);
+       font-size: 20PX;
+       font-weight: 300;
+       }
+/*SECTION*/     
+       .section-title{
+        color: var(--color-primary-dark);
+        font-size: 64px;
+        font-weight: 900;
+        line-height: 1.3;/*84:64=1.3 84 це значення line-height з макету*/
+       }
+       .section-title .accent{
+        color: var(--color-primary-light);
+       }
+
+       .section-title.centered{
+text-align: center;
+       }
+
+/*TRADITIONS SECTION*/
+.traditions-container{
+       display: flex;
+       gap:40px;
+       justify-content: space-between;
+}
+.traditions-content {
+       max-width: 710px;
+}
+.traditions-section {
+padding-top: 96px;
+}
+.traditions-title {
+margin-bottom: 42px;
+}
+       .traditions-text span{
+       text-transform: uppercase;
+       color: var(--color-primary-light);   
+       font-weight: 600; 
+}
+       .traditions-text2 span{
+       color: var(--color-primary-light);      
+}
+.traditions-text2 {
+       max-width: 340px;
+}
+/*CHIEF SECTION*/
+         .chief-title{
+              margin-bottom: 16px;
+       font-weight: 600;
+       font-size: 40px;
+}
+.chiefs-title{
+ margin: 0 auto 80px;
+ max-width: 520px;
+}
+
+
+.chiefs-title::before,
+.chiefs-title::after{
+display: block;
+width: 352px;
+border: 2px solid #CFCFBC ;
+content: "";
+}
+.chief-photo{
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-left-radius: 200px;
+box-shadow: -16px 16px 0 0 var(--color-primary-white), -16px 16px 0 2px #A18268;
+}
+/*FORMAT SECTION*/
+.formats-list{
+       display: flex;
+       flex-wrap: wrap;
+       gap: 20px;
+}
+.formats-item {
+ flex-basis: calc((100% - 40px) / 3);      
+}
+.format-card{
+       padding: 24px;
+       background-image: linear-gradient(180deg,
+        rgba(49, 38, 26, 0) 55.21%, 
+       rgba(49, 38, 26, 0.71) 72.92%,
+       #31261A 100%);
+       border: 1px solid lightgray; /*REMOVE*/
+       border-radius: 16px;    
+       height: 444 px;
+
+}
+
+.formats-title{
+    margin-bottom: 80px;    
+}
+.format-title{
+       font-weight: 600;
+       font-size: 24PX;
+}
+.format-text{
+       font-weight: 300;
+       font-size: 14PX;    
+      
+}
+
+/*CAROUSEL*/
+.carousel-button{
+       display:flex;
+       width: 44px;
+       height: 44px;
+       padding: 0;
+       justify-content: center;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 1px solid var(--color-primary-dark);
+        cursor: pointer;
+}
+.carousel-arrow{
+       fill: var(--color-primary-dark);
+}
+.carousel-button:hover{
+       background-color: var(--color-primary-dark);
+}
+.carousel-button:hover .carousel-arrow{
+     fill: var(--color-primary-white);  
+}
+/*CONTACTS*/
+.contacts-title{
+margin-bottom: 16px;
+}
+
+/*ADDRESS*/
+
+.address-icon{
+       fill: var(--color-primary-white);
+}
+
+.address-link{
+       font-weight: 300;
+       font-size: 16PX;  
+       color: var(--color-primary-white);     
+}
+.address-link:hover{
+       color: var(--color-primary-light);      
+}
+.address-copyright{
+    font-size: 14PX;    
+}
+
+.footer{
+       background-image: url(../images/footer2.png);
+       background-color: var(--color-primary-dark);
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
+}
